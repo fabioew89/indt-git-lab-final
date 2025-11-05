@@ -26,9 +26,10 @@ def listar_comandos_git_basicos():
     Exemplo de saída:
     ["git init", "git add", "git commit", "git status", "git push"]
     """
-    pass
-
-
+    comandos_git = ["git init", "git add", "git commit", "git status", "git push"]
+    for i in comandos_git:
+        print(i)
+    
 def criar_mensagem_commit(funcao_nome):
     """
     Recebe o nome de uma função e retorna uma mensagem de commit padronizada.
