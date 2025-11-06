@@ -39,13 +39,21 @@ def criar_mensagem_commit(funcao_nome):
     """
     return f'Implementa função {funcao_nome}'
 
-
 def verificar_tag_valida(tag):
     """
     Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
     Retorna True se o formato for válido, caso contrário False.
     """
-    pass
+    import re
+
+    padrao = r"^v\d+\.\d+$"
+    
+    if re.match(padrao, tag):
+        return True
+    return False
+
+print(verificar_tag_valida("v1.0"))  # True
+print(verificar_tag_valida("v2.1"))  # True
 
 
 def gerar_relatorio_final(funcoes_concluidas):
