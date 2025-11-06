@@ -66,4 +66,7 @@ def gerar_relatorio_final(funcoes_concluidas):
     ->
     "Desafio concluído! 2 funções implementadas com sucesso."
     """
-    pass
+    num_funcoes = len(funcoes_concluidas)  # Conta o número de funções na lista
+    return f"Desafio concluído! {num_funcoes} funções implementadas com sucesso."
+
+print(gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"]))
